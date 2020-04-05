@@ -3,9 +3,12 @@ from lxml import html
 import pprint
 import json
 from datetime import datetime
-
+#TODO:
+# Automate grabbing tracklist html (possibly using Spotify API)
+# Alphabetize json output by trackname
+# 
 #Read Spotify's html for playlist webpage into BeautifulSoup
-full_website_html = open('tracklist.html', 'r')
+full_website_html = open('playlistHTMLS/tracklist.html', 'r')
 soup = BeautifulSoup(full_website_html, 'html.parser')
 
 #Extract the tracklist as a BeautifulSoup Object
@@ -29,7 +32,7 @@ for i in range(len(complete_tracklist)):
 
 #Convert list to a json file
 wfilename = datetime.today().strftime('%b-%d-%Y') + " Tracklist.json"
-wfile = open(wfilename, 'w')
+wfile = open("outputs/" + wfilename, 'w')
 wfile.write(json.dumps(parsed_list, indent=2))
 
 wfile.close()

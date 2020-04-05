@@ -1,2 +1,0 @@
-tracklist = document.querySelector("#main > div > div.Root__top-container > div.Root__main-view > div.main-view-container > div > div.main-view-container__scroll-node-child > div.contentSpacing > section > div > div > div.col-xs-12.col-lg-9.col-xl-8 > section > ol")
-console.log(tracklist)
